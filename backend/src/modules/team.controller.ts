@@ -1,7 +1,8 @@
+/* eslint-disable prettier/prettier */
 import { Body, Controller, Get, Param, Post } from "@nestjs/common";
 import { Members } from "src/entities/members.entity";
+import { LoginMemberI } from "src/interfaces/login.interface";
 import { MemberInterface } from "src/interfaces/member.interface";
-import { DeepPartial } from "typeorm";
 import { TeamService } from "./team.service";
 
 @Controller("team")
@@ -27,7 +28,7 @@ export class TeamController {
     }
 
     @Get("findAll")
-    async findAll(){
+    async findAll(): Promise<Members[]> {
         return await this.teamServ.findAll()
     }
 
@@ -35,6 +36,17 @@ export class TeamController {
     async delete(@Param() idMmeber:number){
         console.log(idMmeber);
         return await this.teamServ.delete(idMmeber);
+    }
+
+    @Post('login')
+    async loginMember(@Body() loginData: LoginMemberI): Promise<Members> {
+        const resultSearch = await this.teamServ.loginMember(loginData.lastname);
+        if (resultSearch != null) {
+            console.log('Login reussi !!');
+            return await this.teamServ.searchWithPass(loginData.lastname, loginData.password);    
+        }
+
+        return null;
     }
 
 

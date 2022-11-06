@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -11,6 +12,9 @@ export class Members {
     @Column()
     lastName: string;
 
+    @Column({ nullable: false })
+    password: string;
+
     @Column({unsigned:true,})
     age: number;
 
@@ -19,21 +23,4 @@ export class Members {
 
     @Column()
     speciality: string;
-
-
-
-    // @Column({ nullable: true, length: 12})
-    // pswElec: string;
-
-    // @Column()
-    // nameElec: string;
-
-    // @Column()
-    // firstNElec: string;
-
-    // @Column()
-    // isMan: boolean;
-
-    // @Column({default:null})
-    // birthElec: Date;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Members } from "src/entities/members.entity";
@@ -34,5 +35,22 @@ export class TeamService {
 
     async delete(idMember: number){
         return await this.MemberRepos.delete(idMember);
+    }
+
+    async loginMember(lastname: string) {
+        return this.MemberRepos.findOne({
+            where: {
+                lastName: lastname
+            }           
+        })
+    }
+
+    async searchWithPass(lastname: string, password: string): Promise<Members> {
+        return await this.MemberRepos.findOne({
+            where: {
+                lastName: lastname,
+                password: password
+            }
+        })
     }
 }
