@@ -4,6 +4,7 @@ import Miarintsoa from '../../images/Miarintsoa.jpg';
 import Dina from '../../images/Dina.jpg';
 import Anjara from '../../images/Anjara.jpeg';
 import Flavio from '../../images/Flavio2.jpg';
+import Haja from '../../images/Haja.jpeg';
 
 export const MemberTeam = () => {
     
@@ -27,6 +28,11 @@ export const MemberTeam = () => {
             picture: Anjara,
             nom: 'Miarintsoa Itokiana',
             spec: 'Product Owner'
+        },
+        {
+            picture: Haja,
+            nom: 'Haja Rajerison',
+            spec: 'Graphic Designer'
         }
     ];
 
