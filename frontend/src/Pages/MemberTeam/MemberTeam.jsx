@@ -1,4 +1,4 @@
-import { CardMember } from '../../Components/Navbar/Card-member/CardMember';
+import { CardMember } from '../../Components/Card-member/CardMember';
 import './MemberTeam.css';
 import Miarintsoa from '../../images/Miarintsoa.jpg';
 import Dina from '../../images/Dina.jpg';

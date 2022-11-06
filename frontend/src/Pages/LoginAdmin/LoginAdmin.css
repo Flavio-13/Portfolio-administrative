@@ -1,0 +1,67 @@
+.login-admin {
+    color: #4343b4;
+    text-align: center;
+    box-shadow: 1px 0px 5px 2px grey;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.login-admin h1 {
+    margin-top: 0;
+}
+
+
+.form-admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    /* height: 100vh; */
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 2px #4343b4;
+    border-radius: 7px;
+}
+
+.input input {
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    font-family: 'ubuntu';
+}
+
+.icon-input {
+    width: 20px;
+    height: 100%;
+    color: #4343b4;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-login-admin {
+    margin-top: 20px;
+    background-color: #4343b4;
+    height: 50px;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    font-family: 'ubuntu';
+}
+
+.btn-login-admin:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 5px 2px grey;
+}
